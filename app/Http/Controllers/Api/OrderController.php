@@ -28,7 +28,8 @@ class OrderController extends Controller
                 'kasir_id' => $request->kasir_id,
                 'total_price' => $request->total_price,
                 'total_item' => $request->total_item,
-              
+                'payment_method' => $request->payment_method,
+
         ]);
 
         //create order item
