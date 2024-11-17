@@ -22,7 +22,7 @@ return new class extends Migration
             //kasir id
             $table->foreignId('kasir_id')->constrained('users');
             //payment method
-            $table->enum('payment_method', ['cash', 'qris']);
+            $table->enum('payment_method', ['Tunai', 'QRIS']);
 
             $table->timestamps();
         });
