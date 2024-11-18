@@ -66,7 +66,7 @@
                                                         href="{{ route('order.show', $order->id) }}">{{ $order->transaction_time }}</a>
                                                 </td>
                                                 <td>
-                                                    {{ $order->total_price }}
+                                                    @currency($order->total_price)
                                                 </td>
                                                 <td>
                                                     {{ $order->total_item }}

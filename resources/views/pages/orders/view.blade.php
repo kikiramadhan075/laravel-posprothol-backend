@@ -100,13 +100,13 @@
                                                 <td>{{ $item->product->name }}</td>
                                                 </td>
                                                 <td>
-                                                    {{ $item->product->price }}
+                                                    @currency($item->product->price)
                                                 </td>
                                                 <td>
                                                     {{ $item->quantity }}
                                                 </td>
                                                 <td>
-                                                    {{ $item->total_price }}
+                                                    @currency($item->total_price)
 
                                                 </td>
 
@@ -130,8 +130,8 @@
                         <hr class="mt-2 mb-2">
                         <div class="invoice-detail-item">
                         <div class="invoice-detail-name">Total</div>
-                        <div class="invoice-detail-value">{{ $order->total_price }}</div>
-                        {{-- <div class="invoice-detail-value invoice-detail-value-lg">@currency($order->total_price)</div> --}}
+                        {{-- <div class="invoice-detail-value">{{ $order->total_price }}</div> --}}
+                        <div class="invoice-detail-value invoice-detail-value-lg">@currency($order->total_price)</div>
                         </div>
                     </div>
                     </div>
