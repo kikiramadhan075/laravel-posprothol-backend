@@ -30,3 +30,5 @@ Route::apiResource('products', \App\Http\Controllers\Api\ProductController::clas
 // api resource order
 Route::apiResource('orders', \App\Http\Controllers\Api\OrderController::class)->middleware('auth:sanctum');
 
+// api discounts
+Route::get('/api-discounts', [\App\Http\Controllers\Api\DiscountController::class, 'index'])->middleware('auth:sanctum');
